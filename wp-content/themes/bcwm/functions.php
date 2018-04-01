@@ -244,9 +244,6 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
-?>
-
-<?php //adding options pages
 
 if( function_exists('acf_add_options_page') ) {
 
