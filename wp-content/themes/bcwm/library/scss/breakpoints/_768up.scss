@@ -1,0 +1,710 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 760px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	position:static;
+	#inner-header {
+		position:relative;
+	}
+	.menu-button {
+		display:none;
+	}
+	nav {
+		position:absolute;
+		right:0;
+		top:1em;
+		text-align:center;
+		width:auto;
+		padding-bottom:0;
+		.portal {
+			text-align:right;
+			font-size:0.85em;
+		}
+		li {
+			float:none;
+			display:inline-block;
+			vertical-align:top;
+		}
+		li a {
+			font-size: 0.875em;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+	#logo {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {
+	border: 0;
+	ul {
+		background:$dark-blue;
+		margin-top:0;
+	}
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				color: $white;
+				text-decoration: underline;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border-top: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					font-size:0.75em;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer {
+	.nav{
+		li {
+			border-right:solid 1px;
+			&:last-of-type {
+				border-right:none;
+			}
+			a {
+				font-size:0.825em;
+				font-weight:bold;
+				padding-top:0;
+				padding-bottom:5px;
+				line-height:1em;
+			}
+		}
+	}
+}
+.footer-top {
+	position:relative;
+	font-size:0.875em;
+	height:9em;
+	border-bottom:solid 1px lighten($dark-blue, 10%)
+}
+.footer-logo {
+	position:absolute;
+	left:0;
+}
+.footer-contact {
+	position:absolute;
+	right:0;
+}
+.footer-address {
+	display:inline-block;
+	text-align:right;
+}
+.footer-phone {
+	display:inline-block;
+	text-align:right;
+}
+.footer-bottom {
+	height:6em;
+	position:relative;
+}
+.footer-bottom__left {
+	position:absolute;
+	left:0;
+}
+.footer-bottom__right {
+	position:absolute;
+	right:0;
+	.social_media__icon {
+		margin-top:0;
+	}
+}
+.copyright_desktop {
+	display:block;
+	margin:0;
+	text-align:left;
+	font-size:0.825em;
+}
+.copyright_mobile {
+	display:none;
+}
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+/* Breadcrumbs */
+#breadcrumbs {
+	display:block;
+	font-size:0.75em;
+	text-transform:uppercase;
+	font-family:$serif;
+	a {
+		text-decoration: none;
+		color:$text-color;
+		cursor:default;
+		text-transform:uppercase;
+		font-family:$serif;
+	}
+}
+/* Homepage */
+.home {
+	.home-section-1 {
+		background-image: url('../images/home_bg.png');
+		background-repeat: no-repeat;
+		background-position:center right;
+		h1, p {
+			max-width:600px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		h1 {
+			margin-top:1em;
+			font-size:3em;
+		}
+		.link-box-container {
+			display:inline-block;
+			margin:0 1em;;
+		}
+		.team-image {
+			position:relative;
+			top:-25px;
+		}
+	}
+	.home-section-2 {
+		margin-top:-25px;
+		.slogan-2 {
+			position:relative;
+			max-width:875px;
+			margin:0 auto;
+		}
+		.link-box-container {
+			display:inline-block;
+			width:250px;
+		}
+	}
+}
+
+/* Personal Wealth Management */
+.services-container {
+	max-width:800px;
+}
+.services-item {
+	display:inline-block;
+	width:30%;
+
+
+}
+ /* Our Investment Philosophy */
+ .page-template-philosophy {
+	 .page-header h1 {
+		 transform:translateY(-75%);
+	 }
+	 .philosophy-left {
+		 display:inline-block;
+		 width:75%;
+		 vertical-align:top;
+	 }
+	 .philosophy-right {
+		 display:inline-block;
+		 width:23%;
+		 vertical-align:top;
+		 text-align:right;
+		 float:right;
+		 .philosophy-icon {
+			 margin-right:0;
+		 }
+	 }
+ }
+
+/* What We Do */
+.page-template-what-we-do {
+	.page-header {
+		padding-left:0;
+		padding-right:0;
+		max-width:1040px;
+		margin:0 auto;
+		padding-top:0;
+		h1 {
+			padding-top:1em;
+		}
+		.intro p {
+			margin-top:0;
+		}
+	}
+	.link-box-container {
+		display:inline-block;
+		margin:0 1em;;
+	}
+}
+
+/* Who We Are */
+.page-template-who-we-are {
+	.page-header {
+		padding-left:0;
+		padding-right:0;
+		max-width:1040px;
+		margin:0 auto;
+		position:relative;
+		.certifications {
+			img {
+				display:inline-block;
+				vertical-align:middle;
+				margin:2em;
+			}
+		}
+	}
+	.page-content {
+		text-align:left;
+	}
+}
+
+/* Bio Pages */
+.page-template-bio {
+	#inner-content {
+		padding-left:0;
+		padding-right:0;
+	}
+	.bio-left {
+		display:inline-block;
+		vertical-align:top;
+		width:60%;
+		margin-right:5%;
+	}
+	.bio-right {
+		display:inline-block;
+		vertical-align:top;
+		width:30%;
+	}
+}
+.page-template-icm, .page-template-pwm, .page-template-philosophy {
+	.page-header {
+		padding-left:0;
+		padding-right:0;
+		max-width:1040px;
+		margin:0 auto;
+		position:relative;
+		h1 {
+			transform:translateY(-100%);
+		}
+	}
+}
+
+/* Our History */
+.page-template-our-history {
+	.page-header {
+		padding-left:0;
+		padding-right:0;
+		max-width:1040px;
+		margin:0 auto;
+		position:relative;
+		.header-content {
+			width:60%;
+			padding-top:2em;
+			p:last-of-type {
+				margin-bottom:0;
+				padding-bottom:2em;
+			}
+		}
+		img {
+			position:absolute;
+			bottom:0;
+			right:0;
+			left:auto;
+			transform:none;
+			max-height:400px;
+		}
+	}
+	.page-content {
+		padding-left:0;
+		padding-right:0;
+		.page-content-inner {
+			max-width:1040px;
+		}
+	}
+}
+ /* What We Care About */
+ .page-template-what-we-care-about {
+	 .page-header {
+		 padding-left:0;
+		 padding-right:0;
+		 padding-bottom:6em;
+		 .page-header-inner {
+			max-width:1040px;
+		 	margin:0 auto;
+		}
+	 }
+	 .page-content {
+		 margin-top:-5em;
+		 .cause {
+			 text-align:left;
+			 display:inline-block;
+			 width:32%;
+			 padding:0 2em;
+			 vertical-align:top;
+		 }
+	 }
+ }
+
+/* Contact */
+.page-template-contact {
+	.page-header {
+		background-size:450px;
+		background-position: 80% 50%;
+	}
+}
+
+/* Commentary */
+.blog {
+	.page-header {
+		padding-left:0;
+		padding-right:0;
+	}
+	.search-boxes-container {
+		max-width:800px;
+		margin:0 auto;
+		text-align:left;
+	}
+	.search-boxes {
+		max-width:none;
+		text-align:left;
+		display:inline-block;
+		vertical-align:top;
+		width:45%;
+		margin-top:2em;
+		&:last-of-type {
+			float:right;
+		}
+	}
+}
+
+/* Publications */
+.page-template-publications {
+	.page-header {
+		padding-left:0;
+		padding-right:0;
+		max-width:1040px;
+		margin:0 auto;
+		h1 {
+			transform:translateY(-100%);
+		}
+	}
+	.page-content-inner {
+		padding-left:0;
+		padding-right:0;
+		max-width:1040px;
+		margin:0 auto;
+	}
+}
+
+.page-template-publications {
+	.link-box-container {
+		display:inline-block;
+		vertical-align:top;
+		margin:0 1em;
+	.link-box__main a {
+						width:250px;
+	}
+	}
+}
+
+/* Publications List */
+.page-template-publications-list {
+	.page-header {
+		padding-left:0;
+		padding-right:0;
+		max-width:1040px;
+		margin:0 auto;
+		h1 {
+			transform:translateY(-100%);
+		}
+	}
+	.page-content {
+		padding-top:0;
+
+		.page-content-left {
+			display:inline-block;
+			background:$gray;
+			vertical-align:top;
+			width:30%;
+			text-align:left;
+			position:relative;
+			min-height:500px;
+			.page-content-left-inner {
+				float:right;
+				margin-right:2em;
+			}
+		}
+		.page-content-right {
+			display:inline-block;
+			vertical-align:top;
+			width:65%;
+			padding-top:0;
+			position:relative;
+			h2 {
+				cursor:pointer;
+			}
+			.publication-category {
+				display:none;
+				&.open {
+					display:block;
+				}
+			}
+			.post-content {
+				height:0;
+				overflow:hidden;
+				transition: height 1s;
+				&.open {
+					height:auto;
+					transition: height 1s;
+				}
+			}
+		}
+	}
+
+}
