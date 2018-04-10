@@ -27,6 +27,8 @@
 							</div>
 
 							<div class="page-content">
+								<img id="publications-line-2" src="<?php echo get_template_directory_uri()?>/library/images/publications-line-2.png" />
+								<img id="publications-line-1" src="<?php echo get_template_directory_uri()?>/library/images/publications-line-1.png" />
 								<div class="page-content-inner">
 
 									<h2>Financial Planning</h2>
@@ -34,37 +36,37 @@
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Education Planning</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#retirement-section">Retirement Planning</a></div>
 											</div>
 										</div>
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Retirement Planning</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#education-section">Education Planning</a></div>
 											</div>
 										</div>
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Insurance Planning</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#tax-section">Tax Planning</a></div>
 											</div>
 										</div>
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Tax Planning</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#estate-section">Estate Planning</a></div>
 											</div>
 										</div>
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Estate Planning</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#insurance-section">Insurance Planning</a></div>
 											</div>
 										</div>
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Philanthropic Planning</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#philanthropic-section">Philanthropy Planning</a></div>
 											</div>
 										</div>
 									</div>
@@ -74,19 +76,19 @@
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Securities</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#securities-section">Securities</a></div>
 											</div>
 										</div>
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Economics</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#economics-section">Economics</a></div>
 											</div>
 										</div>
 
 										<div class="link-box-container">
 											<div class="link-box link-box__main">
-												<a href="<?php echo site_url(); ?>/publications-list">Behavioral Finance</a>
+												<div class="link-box-link"><a href="<?php echo site_url(); ?>/publications-list/#behavioral-section">Behavioral Finance</a></div>
 											</div>
 										</div>
 

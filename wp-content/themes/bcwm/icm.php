@@ -27,6 +27,7 @@
 							</div>
 
 							<div class="page-content">
+								<img id="icm-line" src="<?php echo get_template_directory_uri()?>/library/images/icm-line.png" />
 								<div class="page-content-inner">
 									<h2><?php the_field('headline'); ?></h2>
 									<?php the_content(); ?>

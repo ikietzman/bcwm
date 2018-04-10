@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Bio
+ Template Name: Full Width
 */
 ?>
 
@@ -15,8 +15,6 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<div class="page-header">
-								<img id="bio-line-1" src="<?php echo get_template_directory_uri()?>/library/images/bio-line-1.png" />
-								<img id="bio-line-2" src="<?php echo get_template_directory_uri()?>/library/images/bio-line-2.png" />
 								<?php
 									if ( function_exists('yoast_breadcrumb') ) {
 										yoast_breadcrumb('
@@ -24,17 +22,13 @@
 										');
 									}
 								?>
-								<div class="bio-left">
-									<h1 class="page-title"><?php the_title(); ?></h1>
-									<h3><?php the_field('certifications'); ?></h3>
-									<h2><?php the_field('title'); ?></h2>
-									<?php the_content(); ?>
-								</div>
-								<div class="bio-right">
-									<img src="<?php the_field('image'); ?>" />
-								</div>
+
+									<h1><?php the_title(); ?></h1>
 
 
+							</div>
+							<div class="page-content">
+								<?php the_content(); ?>
 							</div>
 
 

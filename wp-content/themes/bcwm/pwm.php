@@ -26,6 +26,7 @@
 							</div>
 
 							<div class="page-content">
+								<img id="icm-line" src="<?php echo get_template_directory_uri()?>/library/images/icm-line.png" />
 								<div class="page-content-inner">
 									<h2><?php the_field('headline'); ?></h2>
 									<?php the_content(); ?>
@@ -62,7 +63,7 @@
 												while ( have_rows('pwm_services') ) : the_row();
 
 														// display a sub field value
-														echo '<div class="services-item">' . get_sub_field('item') . '</div>';
+														echo '<div class="services-item"><a href="' . site_url() . '/news/publications-list/#' . get_sub_field('link') . '">' . get_sub_field('item') . '</a></div>';
 
 												endwhile;
 											echo '</div>';

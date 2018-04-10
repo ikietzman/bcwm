@@ -16,6 +16,7 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<div class="page-header">
+								<img id="what-we-do-line" src="<?php echo get_template_directory_uri()?>/library/images/what-we-do-line.png" />
 								<?php
 									if ( function_exists('yoast_breadcrumb') ) {
 										yoast_breadcrumb('

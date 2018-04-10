@@ -51,6 +51,24 @@ FONT FACE (IN YOUR FACE)
       font-weight: normal;
       font-style: normal;
   }
+  @font-face {
+       font-family: 'Merriweather Bold';
+       src:   url('../fonts/Merriweather-Bold.ttf') format('truetype');
+       font-weight: normal;
+       font-style: normal;
+   }
+  @font-face {
+       font-family: 'Proxima Nova';
+       src:   url('../fonts/ProximaNovaBold.otf') format('truetype');
+       font-weight: normal;
+       font-style: normal;
+   }
+   @font-face {
+        font-family: 'Proxima Nova Semi Bold';
+        src:   url('../fonts/ProximaNovaSbold.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
 
 
 /*
@@ -63,7 +81,9 @@ I've edited it a bit, but it's a nice starting point.
 // font stacks
 $sans-serif:        "Trade Gothic", Helvetica, Arial, sans-serif;
 $serif:             "Merriweather", Times New Roman, Times, serif;
-
+$serif-bold:        "Merriweather Bold", $serif;
+$proxima:           "Proxima Nova", $sans-serif;
+$promixa-semibold:  "Proxima Nova Semi Bold", $proxima;
 /*
  i imported this one in the functions file so bones would look sweet.
  don't forget to remove it for your site.
@@ -79,9 +99,9 @@ p {
   word-break: break-word; //non-standart css for webkit
   word-wrap: break-word;
   // cleaning up the ragged lines and breaks
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-          hyphens: auto;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+          hyphens: none;
   // sets a minimum number of characters before and after the break
   -webkit-hyphenate-before: 2;
    -webkit-hyphenate-after: 3;

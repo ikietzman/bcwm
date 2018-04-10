@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 			<div id="content">
-
+				<img id="home-line-1" src="<?php echo get_template_directory_uri()?>/library/images/home-line.png" />
 				<div id="inner-content" class="cf">
 						<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -41,12 +41,14 @@
 											?>
 
 									</div>
-									<div class="team-image">
+									<div class="team-image" id="team-image">
 										<img src="<?php the_field('team_image'); ?>" />
 									</div>
 								</div>
 
 								<div class="home-section-2">
+									<img id="home-line-2" src="<?php echo get_template_directory_uri()?>/library/images/home-line-2.png" />
+									<img id="home-line-3" src="<?php echo get_template_directory_uri()?>/library/images/home-line-3.png" />
 									<div class="slogan-2" id="slogan-2">
 										<?php the_field('slogan_2'); ?>
 									</div>
@@ -56,16 +58,16 @@
 
 											// check if the repeater field has rows of data
 											if( have_rows('secondary_link_boxes') ):
-
+													$i = 1;
 											 	// loop through the rows of data
 											    while ( have_rows('secondary_link_boxes') ) : the_row();
 
 											        // display a sub field value
-															echo '<div class="link-box-container"><div class="link-box link-box__secondary">';
+															echo '<div class="link-box-container"><div class="link-box link-box__secondary link-box__secondary__' . $i . '">';
 															echo '<a class="main-link" href="' . site_url() . get_sub_field('link') . '">' . get_sub_field('label') .'</a>';
 															echo '<a class="learn-more" href="' . site_url() . '">Learn More</a>';
 															echo '</div></div>';
-
+															$i++;
 											    endwhile;
 
 											else :

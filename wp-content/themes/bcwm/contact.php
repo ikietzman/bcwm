@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Contact
+ Template Name:
 */
 ?>
 
@@ -15,7 +15,7 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<div class="page-header" style="background-image:url('<?php the_field('header_image'); ?>')">
-								<div class="page-header-inner">
+
 									<?php
 										if ( function_exists('yoast_breadcrumb') ) {
 											yoast_breadcrumb('
@@ -24,7 +24,7 @@
 										}
 									?>
 									<h1 class="page-title"><?php the_title(); ?></h1>
-									<h3>Boyer Corporon Wealth Management</h3>
+									<h3 class="first-h3">Boyer Corporon Wealth Management</h3>
 									<p><?php the_field('address_1', 'option'); ?>, <?php the_field('address_2', 'option'); ?></p>
 									<p><?php the_field('address_3', 'option'); ?></p>
 									<h3>Phone</h3>
@@ -57,13 +57,16 @@
 										endif;
 
 										?>
-									</div>
+
 							</div>
 
 							<div class="page-content">
-								<div class="page-content-inner">
-									<h2><?php the_field('form_title'); ?></h2>
-									<?php the_content(); ?>
+								<div class="page-content-container">
+									<img id="contact-line" src="<?php echo get_template_directory_uri()?>/library/images/contact-line.png" />
+									<div class="page-content-inner">
+										<h2><?php the_field('form_title'); ?></h2>
+										<?php the_content(); ?>
+									</div>
 								</div>
 							</div>
 
@@ -90,6 +93,5 @@
 				</div>
 
 			</div>
-
 
 <?php get_footer(); ?>

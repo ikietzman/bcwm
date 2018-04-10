@@ -133,6 +133,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	font-family: $serif-bold;
+  font-weight: 600;
+  text-transform: uppercase;
+	line-height:1.125em;
 }
 
 h2, .h2 {
@@ -938,7 +942,7 @@ FOOTER STYLES
 	}
 }
 .footer-top {
-	padding-top:1em;
+	padding-top:2.5em;
 }
 .footer-address, .footer-phone {
 	padding:1em;
@@ -979,17 +983,19 @@ FOOTER STYLES
 /* Breadcrumbs */
 #breadcrumbs {
 	display:none;
-	max-width:1040px;
 	// margin-left:auto;
 	// margin-right:auto;
-	margin-top:1em;
+	margin-top:2.5em;
 	margin-bottom:1em;
 	font-weight:normal !important;
+	position:absolute;
+	top:0;
+	left:0;
+	cursor:pointer;
 }
 /* General Styles */
 
 .page-content-inner {
-	max-width:1040px;
 	margin-left: auto;
 	margin-right:auto;
 }
@@ -1026,6 +1032,7 @@ FOOTER STYLES
 			a {
 				color:$gold;
 				font-family:$serif;
+				font-weight:bold;
 				text-transform: uppercase;
 				text-decoration:none;
 				border:solid 1px;
@@ -1041,20 +1048,20 @@ FOOTER STYLES
 	h1 {
 		color:$dark-blue;
 		text-align:center;
-
-		line-height:1.5em;
 	}
 	.slogan-2 {
 		background:$gray;
 		text-align:center;
-		padding:1em 3em;
+		padding:1.5em 3em;
 		font-family:$serif;
 		font-style:italic;
+		font-size:1.25em;
+		color:$blue;
 	}
 	.home-section-2 {
 		article {
 			position:relative;
-			background:$white;
+			background:$light-gray;
 			max-width:800px;
 			margin:2em auto;
 			text-align:center;
@@ -1066,7 +1073,7 @@ FOOTER STYLES
 		    transform: translateX(-50%);
 				font-family:$serif;
 				text-transform: uppercase;
-				background:$white;
+				background:$light-gray;
 				padding-left:1em;
 				padding-right:1em;
 				font-weight:bold;
@@ -1077,22 +1084,28 @@ FOOTER STYLES
 			}
 			.article-inner {
 				border:solid 2px $blue;
-				padding-bottom:1em;
+				padding-bottom:0.5em;
 			}
 			.entry-title {
 				font-weight:bold;
-				font-size:1.5em
+				font-size:1.5em;
+				font-family:$proxima;
+				text-transform:none;
+				letter-spacing:2px;
 			}
 			.byline {
 				font-family:$serif;
 				color:$text-color;
-				font-size:0.75em;
+				font-size:0.55em;
+				letter-spacing:2px;
 				text-transform: uppercase;
 				font-style: normal;
 			}
 			.read-more {
 				text-transform: uppercase;
 				padding:0.5em;
+				font-family:$promixa-semibold;
+				font-size:1.25em;
 				a {
 					color:$gold;
 					text-decoration: none;
@@ -1109,34 +1122,71 @@ FOOTER STYLES
 			text-align:center;
 			text-transform: uppercase;
 			font-family: $serif;
+			line-height:1em;
 		}
 		.link-box-container {
-			background:$gray;
+			background:$blue;
 			padding:1em;
 			max-width:300px;
 			margin: 0 auto 1em auto;
 			&:hover {
-				background:$blue;
+				background-repeat:no-repeat;
+				background-position:center;
+				background:$gray;
+				.link-box__secondary {
+					border-color:$gold;
+					background:$gray;
+				}
+				.main-link {
+					color:$dark-blue !important;
+				}
+				.link-box__secondary__1 {
+					background-image:url('../images/scales_bg_hover.png') !important;
+					background-repeat:no-repeat !important;
+					background-position:center !important;
+				}
+				.link-box__secondary__2 {
+					background-image:url('../images/house_bg_hover.png') !important;
+					background-repeat:no-repeat !important;
+					background-position:center !important;
+				}
+				.link-box__secondary__3 {
+					background-image:url('../images/book_bg_hover.png') !important;
+					background-repeat:no-repeat !important;
+					background-position:center !important;
+				}
 				a {
-					color:$light-gray;
+					color:$dark-blue;
 				}
 			}
 		}
 		.link-boxes__secondary {
 			text-align:center;
+			position:relative;
 			.link-box__secondary {
-				border:solid 2px $gold;
+				border:solid 2px $dark-blue;
 				position:relative;
 				height:200px;
-				background-image:url('../images/house.png');
+				// background-image:url('../images/house.png');
 				background-repeat:no-repeat;
 				background-position:center;
+				&.link-box__secondary__1 {
+					background-image:url('../images/scales_bg.png');
+				}
+				&.link-box__secondary__2 {
+					background-image:url('../images/house_bg.png');
+				}
+				&.link-box__secondary__3 {
+					background-image:url('../images/book_bg.png');
+				}
 				.main-link {
 					display:block;
 					font-family:$serif;
 					text-decoration:none;
 					text-transform: uppercase;
 					padding:3em 1em;
+					color:$light-gray;
+					font-weight:bold;
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
@@ -1158,6 +1208,7 @@ FOOTER STYLES
 			    padding: 0.5em 1em;
 				}
 			}
+
 		}
 	}
 
@@ -1173,9 +1224,9 @@ FOOTER STYLES
 		h1 {
 			color:$blue;
 			text-transform:uppercase;
-			font-family: $serif;
+			font-family: $serif-bold;
 			text-align:center;
-			font-size:2em;
+			font-size:1.5em;
 			position:relative;
 			top:50%;
 			transform:translateY(-50%);
@@ -1185,20 +1236,21 @@ FOOTER STYLES
 		background:$light-gray;
 		padding:1em 5% 2em 5%;
 		.page-content-inner {
-			max-width:1040px;
 			margin:0 auto;
 		}
 		h2 {
 			color:$blue;
-			font-family: $sans-serif;
+			font-family: $proxima;
 			text-transform: uppercase;
 			font-size:1.25em;
 			font-weight:bold;
+			letter-spacing:1.5px;
 		}
 		h3 {
 			font-family: $serif;
 			text-transform: uppercase;
-			font-size:1em;
+			font-size:0.75em;
+			font-weight: bold;
 		}
 		.services-item {
 			text-transform: uppercase;
@@ -1206,13 +1258,30 @@ FOOTER STYLES
 			padding:0.25em 0;
 			font-weight:bold;
 			font-size:0.875em;
+			font-family: $proxima;
+			letter-spacing: 1px;
+			a {
+				text-decoration: none;
+			}
 		}
 	}
 }
 .page-template-pwm {
+	.page-content{
+		ul {
+			li {
+				// list-style-image: url('../images/triangle_bullet.png');
+				background-image :url('../images/triangle_bullet.png');
+				list-style-type:none;
+				background-repeat: no-repeat;
+				background-position:0 10px;
+				padding-left:1em;
+			}
+		}
+	}
 	.ticker {
 		position:relative;
-		height:1em;
+		height:1.5em;
 	}
 	.ticker-item {
 		font-family:$serif;
@@ -1255,9 +1324,8 @@ FOOTER STYLES
 	 }
  }
 /* Full Width Page */
-.page-template-full-width, .single {
+.page-template-full-width, .page-template-full-width-page, .single {
 	.page-content, .page-header {
-		max-width:1040px;
 		margin:0 auto;
 		padding-left:5%;
 		padding-right:5%;
@@ -1297,15 +1365,17 @@ FOOTER STYLES
 		background:$light-gray;
 		padding:1em 5% 2em 5%;
 		.page-content-inner {
-			max-width:1040px;
 			margin:0 auto;
 		}
 		h2 {
 			color:$blue;
-			font-family: $sans-serif;
+			font-family: $proxima;
 			text-transform: uppercase;
 			font-size:1.25em;
 			font-weight:bold;
+			letter-spacing:2px;
+			margin-top:1.5em;
+			margin-bottom:1.25em;
 		}
 		h3 {
 			font-family: $serif;
@@ -1331,6 +1401,7 @@ FOOTER STYLES
 		padding-right:5%;
 		padding-top:3em;
 		padding-bottom:2em;
+		position:relative;
 		.intro {
 			text-align:center;
 			max-width:800px;
@@ -1340,7 +1411,7 @@ FOOTER STYLES
 		}
 	}
 	h1 {
-		font-family:$serif;
+		font-family:$serif-bold;
 		color:$blue;
 		text-align:center;
 		font-size:3em;
@@ -1348,10 +1419,16 @@ FOOTER STYLES
 	}
 	h2 {
 		color:$blue;
-		font-family: $sans-serif;
+		font-family: $proxima;
 		text-transform: uppercase;
 		font-size:1.25em;
 		font-weight:bold;
+		letter-spacing:1.5px;
+		margin-bottom:0;
+		margin-top:1.5em;
+	}
+	p {
+		margin-top:0;
 	}
 
 	.page-content {
@@ -1426,7 +1503,7 @@ FOOTER STYLES
 		}
 	}
 	h1 {
-		font-family:$serif;
+		font-family:$serif-bold;
 		color:$blue;
 		text-align:center;
 		font-size:3em;
@@ -1435,10 +1512,12 @@ FOOTER STYLES
 	}
 	h2 {
 		color:$blue;
-		font-family: $sans-serif;
+		font-family: $proxima;
 		text-transform: uppercase;
 		font-size:1.25em;
 		font-weight:bold;
+		margin-bottom:0;
+		letter-spacing:1.5px;
 	}
 
 	.page-content {
@@ -1451,6 +1530,8 @@ FOOTER STYLES
 		.team-section {
 			max-width:800px;
 			margin:0 auto;
+			position:relative;
+			z-index:2;
 		}
 		h2.team-section-title {
 			font-family: $serif;
@@ -1460,17 +1541,29 @@ FOOTER STYLES
 			font-weight:normal;
 			line-height:1em;
 			margin:0 0 1em 0;
+			letter-spacing:5px;
 		}
 		p {
-			margin:0.5em 0 2em 0;
+			margin:0 0 2em 0;
 		}
 
 		.bio {
 			display:inline-block;
 			vertical-align:top;
 			margin:0 1.5em 0 0;
-			img {
+			overflow:hidden;
+			.img-container {
 				width:150px;
+				height:165px;
+				overflow:hidden;
+			}
+			img {
+				height:100%;
+				transition:transform 2s ease;
+				&:hover {
+					transform:scale(1.2);
+					transition:transform 2s ease;
+				}
 			}
 			h3 {
 				font-weight:bold;
@@ -1486,7 +1579,6 @@ FOOTER STYLES
 .page-template-bio {
 	#inner-content {
 		background:$gray;
-		max-width:1040px;
 		margin:0 auto;
 		padding-left:5%;
 		padding-right:5%;
@@ -1494,13 +1586,15 @@ FOOTER STYLES
 	.page-header {
 		padding-top:2em;
 		padding-bottom:2em;
+		position:relative;
 	}
 	h1 {
-		font-family:$serif;
+		font-family:$serif-bold;
 		color:$blue;
 		font-size:2.5em;
 		text-transform: uppercase;
-		letter-spacing:5px;
+		letter-spacing:8px;
+		max-width:50px;
 	}
 	h2 {
 		color:$blue;
@@ -1516,6 +1610,10 @@ FOOTER STYLES
 	}
 	p:nth-of-type(1) {
 		margin-top:0;
+	}
+	.registered {
+		font-size:0.5em;
+		vertical-align:top;
 	}
 }
 
@@ -1540,7 +1638,8 @@ FOOTER STYLES
 		h1 {
 			color:$dark-blue;
 			text-transform:uppercase;
-			font-family: $serif;
+			font-family: $serif-bold;
+			letter-spacing:8px;
 		}
 		p {
 			color:$light-gray;
@@ -1558,24 +1657,28 @@ FOOTER STYLES
 		padding-right:5%;
 		padding-top:1em;
 		padding-bottom:2em;
+		position:relative;
 	}
 	h2 {
 		color:$blue;
-		font-family: $sans-serif;
+		font-family: $proxima;
+		letter-spacing:1.5px;
 		text-transform: uppercase;
 		font-size:1.25em;
 		font-weight:bold;
+		margin-top:2em;
 	}
 }
 
 .page-template-what-we-care-about {
+	background:$gold;
 	.page-header {
 		background:$gold;
 		padding:1em 5% 3em 5%;
 		h1 {
 			color:$dark-blue;
 			text-transform:uppercase;
-			font-family: $serif;
+			font-family: $serif-bold;
 			text-align:center;
 			font-weight:bold;
 		}
@@ -1587,19 +1690,22 @@ FOOTER STYLES
 	.page-content {
 		margin-top:-2em;
 		text-align:center;
+		background:$light-gray;
 		.cause {
 			max-width:300px;
 			margin:0 auto 4em auto;
-		}
-		h2 {
-			color:$blue;
-			font-family: $sans-serif;
-			text-transform: uppercase;
-			font-size:1.25em;
-			font-weight:bold;
 			a {
 				text-decoration:none;
 			}
+		}
+		h2 {
+			color:$blue;
+			font-family: $proxima;
+			letter-spacing:2px;
+			text-transform: uppercase;
+			font-size:1.25em;
+			font-weight:bold;
+
 		}
 		p {
 			font-size:0.825em;
@@ -1609,6 +1715,7 @@ FOOTER STYLES
 
 /* Contact */
 .page-template-contact {
+	background:$gold;
 	.page-header {
 		background:$gold;
 		padding:1em 5% 2em 5%;
@@ -1616,6 +1723,7 @@ FOOTER STYLES
 		background-repeat: no-repeat;
 		background-size:250px;
 		background-position: center;
+		margin:0 auto;
 		#breadcrumbs {
 			text-align:left;
 			a {
@@ -1623,24 +1731,38 @@ FOOTER STYLES
 			}
 		}
 		h1 {
-			font-family: $serif;
+			font-family: $serif-bold;
 			text-transform: uppercase;
 			font-weight:bold;
-			color:darken($gold, 20%)
+			color:#8e643c;
+			letter-spacing:5px;
 		}
 		h3 {
 			color:$dark-blue;
-			font-family: $sans-serif;
+			font-family: $proxima;
 			text-transform: uppercase;
 			font-size:1.125em;
+			line-height:1.125em;
 			font-weight:bold;
-			margin:1em 0 0.5em 0;
+			margin:1em 0 0 0;
+			&.first-h3 {
+				font-family: $serif;
+				font-size:1em;
+				margin-bottom:0.5em;
+				margin-top:1.5em;
+			}
 		}
 		p {
 			margin:0;
 			font-family:$serif;
 			color:$light-gray;
 			font-weight:bold;
+		}
+		.social_media__icon {
+			margin:2em 1em 0 1em;
+			img {
+				max-width:30px;
+			}
 		}
 	}
 	.page-content {
@@ -1653,7 +1775,8 @@ FOOTER STYLES
 		}
 		h2 {
 			font-family: $serif;
-			color:darken($gray, 25%);
+			font-weight: bold;
+			color: #717a82;
 			text-transform: uppercase;
 			font-size:2em;
 		}
@@ -1667,6 +1790,12 @@ FOOTER STYLES
 				text-transform:uppercase;
 				font-family: $serif;
 				font-size:0.75em;
+			}
+			&[type="submit"] {
+				margin-top:2em;
+				font-family:$proxima;
+				font-size:1.25em;
+				padding:0.5em;
 			}
 		}
 		textarea {
@@ -1703,7 +1832,6 @@ FOOTER STYLES
 	background:$gray;
 	.page-header {
 		text-align:center;
-		max-width:1040px;
 		margin:0 auto;
 		padding:0 5% 2em 5%;
 		#breadcrumbs {
@@ -1711,8 +1839,9 @@ FOOTER STYLES
 		}
 		h1 {
 			color:$blue;
-			font-family: $serif;
+			font-family: $serif-bold;
 			text-transform: uppercase;
+			letter-spacing:8px;
 		}
 		p {
 			max-width:800px;
@@ -1720,28 +1849,52 @@ FOOTER STYLES
 		}
 	}
 	article {
+		position:relative;
+		background:$light-gray;
 		max-width:800px;
 		margin:2em auto;
 		text-align:center;
 		padding:2em;
+		h3 {
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			font-family:$serif;
+			text-transform: uppercase;
+			background:$light-gray;
+			padding-left:1em;
+			padding-right:1em;
+			font-weight:bold;
+			font-size:0.825em;
+		}
+		header {
+			padding: 1.5em 1.5em 0 1.5em
+		}
 		.article-inner {
 			border:solid 2px $blue;
-			padding-bottom:1em;
+			padding-bottom:0.5em;
 		}
 		.entry-title {
 			font-weight:bold;
-			font-size:1.5em
+			font-size:1.5em;
+			font-family:$proxima;
+			text-transform:none;
+			letter-spacing:2px;
 		}
 		.byline {
 			font-family:$serif;
 			color:$text-color;
-			font-size:0.75em;
+			font-size:0.55em;
+			letter-spacing:2px;
 			text-transform: uppercase;
 			font-style: normal;
 		}
 		.read-more {
 			text-transform: uppercase;
 			padding:0.5em;
+			font-family:$promixa-semibold;
+			font-size:1.25em;
 			a {
 				color:$gold;
 				text-decoration: none;
@@ -1809,6 +1962,29 @@ FOOTER STYLES
 	}
 }
 
+/* Single Post */
+.single {
+	background: $light-gray;
+	h1 {
+		color:$blue;
+		font-family: $serif-bold;
+		text-transform: uppercase;
+		// letter-spacing:8px;
+	}
+	h2 {
+		color:$blue;
+		font-family: $proxima;
+		letter-spacing:1.5px;
+		text-transform: uppercase;
+		font-size:1.25em;
+		font-weight:bold;
+		margin-top:2em;
+	}
+	.page-content {
+		padding-bottom:2em;
+	}
+}
+
 /* Publications */
 .page-template-publications {
 	#breadcrumbs {
@@ -1827,12 +2003,12 @@ FOOTER STYLES
 		position:relative;
 		background-repeat:no-repeat;
 		background-position:center;
-		background-size:contain;
+		background-size:300px;
 		background-color:$blue;
 		h1 {
 			color:$white;
 			text-transform:uppercase;
-			font-family: $serif;
+			font-family: $serif-bold;
 			text-align:center;
 			font-size:2em;
 			font-weight:bold;
@@ -1842,12 +2018,15 @@ FOOTER STYLES
 		}
 	}
 	.page-content {
-		background:$gray;
+		background:$light-gray;
 		.page-content-inner {
 			padding:2em 5%;
 		}
 		h2 {
 			color:$blue;
+			font-family: $proxima;
+			font-size:1.75em;
+			letter-spacing:1.5px;
 			text-transform: uppercase;
 			text-align: center;
 			font-weight:bold;
@@ -1860,25 +2039,42 @@ FOOTER STYLES
 			background:$dark-blue;
 			padding:1em;
 			max-width:300px;
+			height:200px;
 			margin: 0 auto 1em auto;
 			&:hover {
 				background:$gold;
 				a {
 					color:$dark-blue;
 				}
+				.link-box-link {
+					border-color:$dark-blue;
+				}
 			}
 		}
+		.link-box {
+			height:200px;
+
+		}
 		.link-box__main {
+			.link-box-link {
+				height:168px;
+				min-width:250px;
+				position:relative;
+				border:solid 1px $gold;
+			}
 			a {
 				color:$gold;
 				font-weight:bold;
 				font-family:$serif;
 				text-transform: uppercase;
 				text-decoration:none;
-				border:solid 1px;
+				// border:solid 1px;
 				display:block;
-				padding:3em 3.5em;
-				height:150px;
+				padding:3em 2.5em;
+				position:absolute;
+				top:50%;
+				transform: translateY(-50%);
+
 			}
 		}
 	}
@@ -1924,14 +2120,22 @@ FOOTER STYLES
 	.page-content-left {
 		text-align:center;
 		h2 {
-			font-size:1em;
+			font-size:1.25em;
+			line-height:1.25em;
 			text-transform: uppercase;
 			color:$blue;
+			font-family:$proxima;
 			font-weight:bold;
+			margin-top:2em;
 		}
 		ul {
 			li {
 				color:$gold;
+				&.active {
+					a {
+						color:$dark-blue;
+					}
+				}
 				&:hover {
 					color:$dark-blue;
 				}
@@ -1941,6 +2145,7 @@ FOOTER STYLES
 					text-transform: uppercase;
 					font-size:0.75em;
 					text-decoration: none;
+					letter-spacing:2px;
 					&:hover {
 						color:$dark-blue;
 					}
@@ -1948,10 +2153,19 @@ FOOTER STYLES
 			}
 		}
 	}
+	.page-content-right {
+		h2 {
+			font-family: $proxima;
+			color:$dark-blue;
+			font-size:2em;
+		}
+	}
 	h3 {
-		font-size:1em;
+		font-size:0.75em;
+		letter-spacing: 2px;
 		color:$gold;
 		text-transform: uppercase;
+		font-family: $serif;
 
 	}
 	.page-content {
@@ -1961,3 +2175,7 @@ FOOTER STYLES
 		}
 	}
 }
+ /* Parallax Bullshit */
+ #home-line-1, #home-line-2, #home-line-3, #icm-line, #what-we-do-line, #who-we-are-line-1, #who-we-are-line-2, #bio-line-1, #bio-line-2, #our-history-line, #commentary-line-1, #commentary-line-2, #publications-line-1, #publications-line-2, #contact-line {
+	 display:none;
+ }

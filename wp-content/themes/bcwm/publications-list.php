@@ -29,7 +29,7 @@
 							<div class="page-content">
 								<div class="page-content-left" id="page-content-left">
 									<div class="page-content-left-inner">
-										<h2>Financial Planning</h2>
+										<h2>Financial<br>Planning</h2>
 											<ul class="publications-nav">
 												<li id="education"><a href="#education-section">Education Planning</a></li>
 												<li id="retirement"><a href="#retirement-section">Retirement Planning</a></li>
@@ -38,7 +38,7 @@
 												<li id="estate"><a href="#estate-section">Estate Planning</a></li>
 												<li id="philanthropic"><a href="#philanthropic-section">Philanthropic Planning</a></li>
 											</ul>
-										<h2>Portfolio Management</h2>
+										<h2>Portfolio<br>Management</h2>
 										<ul class="publications-nav">
 											<li id="securities"><a href="#securities-section">Securities</a></li>
 											<li id="economics"><a href="#economics-section">Economics</a></li>

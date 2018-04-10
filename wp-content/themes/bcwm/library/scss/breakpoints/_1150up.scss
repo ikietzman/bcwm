@@ -96,11 +96,25 @@ be seen on the Desktop.
 }
 .blog {
 	.page-header {
-		max-width:1040px;
+    // max-width:1040px;
+    .inner-header {
+		    max-width:1040px;
+      }
   }
 }
 .page-template-full-width, .single {
 	.page-content, .page-header {
+		max-width:1040px;
+	}
+}
+.page-template-contact .page-header {
+  max-width:1040px;
+}
+.page-template-contact .page-content-container {
+  max-width:1040px;
+}
+.page-template-full-width, .page-template-full-width-page, .single {
+	#breadcrumbs, .page-content, .page-header {
 		max-width:1040px;
 	}
 }

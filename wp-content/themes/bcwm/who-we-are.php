@@ -35,7 +35,7 @@
 										    while ( have_rows('icons') ) : the_row();
 
 										        // display a sub field value
-														echo '<img src="' . get_sub_field('icon') .'" />';
+														echo '<a href="' . get_sub_field('link') . '"><img src="' . get_sub_field('icon') .'" /></a>';
 
 										    endwhile;
 
@@ -50,36 +50,39 @@
 							</div>
 
 							<div class="page-content">
+								<img id="who-we-are-line-1" src="<?php echo get_template_directory_uri()?>/library/images/who-we-are-line-1.png" />
+								<img id="who-we-are-line-2" src="<?php echo get_template_directory_uri()?>/library/images/who-we-are-line-2.png" />
 								<div class="team-section">
 									<h2 class="team-section-title"><?php the_field('team_section_title'); ?></h2>
 									<?php
 
 									// check if the repeater field has rows of data
 									if( have_rows('teams') ):
-
+										$i = 1;
 										// loop through the rows of data
 											while ( have_rows('teams') ) : the_row();
 
 													// display a sub field value
-													echo '<div class="bios">';
+													echo '<div class="bios bios' . $i . '">';
 													echo '<h2>' . get_sub_field('team_title') .'</h2>';
-													echo '<p>' . get_sub_field('description') .'"</p>';
+													echo '<p>' . get_sub_field('description') .'</p>';
 													echo '</div>';
 
 
 														// check if the repeater field has rows of data
 														if( have_rows('bios') ):
-
+															$j = 1;
 															// loop through the rows of data
 																while ( have_rows('bios') ) : the_row();
 																		// display a sub field value
 																		$post_object = get_sub_field('bio_page');
-																		echo '<div class="bio"><a href="' . get_permalink($post_object) . '"><img src="' . get_sub_field('thumbnail') .'" /></a>';
+																		echo '<div class="bio bio'.$i.'bio'.$j.'"><a href="' . get_permalink($post_object) . '"><div class="img-container"><img src="' . get_sub_field('thumbnail') .'" /></div></a>';
 																		echo '<h3>' . get_the_title($post_object);
 																		if(get_field('certifications', $post_object)) :
 																			echo ', ' . get_field('certifications', $post_object);
 																		endif;
 																		echo '</h3></div>';
+																		$j++;
 																endwhile;
 
 														else :
@@ -87,7 +90,7 @@
 																// no rows found
 
 														endif;
-
+														$i++;
 
 
 											endwhile;

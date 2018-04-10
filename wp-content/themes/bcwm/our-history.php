@@ -25,13 +25,14 @@
 								?>
 
 								<div class="header-content">
-									<h1 class="page-title"><?php the_title(); ?></h1>
+									<h1 class="page-title"><?php the_field('header_title'); ?></h1>
 									<?php the_content(); ?>
 								</div>
 								<img src="<?php the_field('header_image'); ?>" />
 							</div>
 
 							<div class="page-content">
+								<img id="our-history-line" src="<?php echo get_template_directory_uri()?>/library/images/our-history-line.png" />
 								<div class="page-content-inner">
 									<?php
 
