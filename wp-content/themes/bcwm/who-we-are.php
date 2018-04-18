@@ -35,7 +35,7 @@
 										    while ( have_rows('icons') ) : the_row();
 
 										        // display a sub field value
-														echo '<a href="' . get_sub_field('link') . '"><img src="' . get_sub_field('icon') .'" /></a>';
+														echo '<a href="' . get_sub_field('link') . '" target="_blank"><img src="' . get_sub_field('icon') .'" /></a>';
 
 										    endwhile;
 

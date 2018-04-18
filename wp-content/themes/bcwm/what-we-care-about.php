@@ -40,8 +40,22 @@
 
 														// display a sub field value
 														echo '<div class="cause">';
-														echo '<a target="_blank" href="' . get_sub_field('link') . '"><img src="' . get_sub_field('image') .'" /></a>';
-														echo '<a target="_blank" href="' . get_sub_field('link') . '"><h2>'. get_sub_field('title') . '</h2></a>';
+														echo '<div class="img">';
+														if (get_sub_field('link')):
+															echo '<a target="_blank" href="' . get_sub_field('link') . '">';
+														endif;
+														echo '<img src="' . get_sub_field('image') .'" />';
+														if (get_sub_field('link')):
+															echo '</a>';
+														endif;
+														echo '</div>';
+														if (get_sub_field('link')):
+															echo '<a target="_blank" href="' . get_sub_field('link') . '">';
+														endif;
+														echo '<h2>'. get_sub_field('title') . '</h2>';
+														if (get_sub_field('link')):
+															echo '</a>';
+														endif;
 														echo get_sub_field('content');
 														echo '</div>';
 

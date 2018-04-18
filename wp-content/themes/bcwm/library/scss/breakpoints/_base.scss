@@ -955,7 +955,10 @@ FOOTER STYLES
 }
 .social_media__icon {
 	display:inline-block;
-	margin:1em 0.5em 0 0.5em;;
+	margin:1em 0.5em 0 0.5em;
+	img {
+		width:29px;
+	}
 }
 .copyright_desktop {
 	display:none;
@@ -1123,6 +1126,7 @@ FOOTER STYLES
 			text-transform: uppercase;
 			font-family: $serif;
 			line-height:1em;
+			margin-bottom: 1.5em;
 		}
 		.link-box-container {
 			background:$blue;
@@ -1251,6 +1255,7 @@ FOOTER STYLES
 			text-transform: uppercase;
 			font-size:0.75em;
 			font-weight: bold;
+			margin-top:4em;
 		}
 		.services-item {
 			text-transform: uppercase;
@@ -1567,7 +1572,7 @@ FOOTER STYLES
 			}
 			h3 {
 				font-weight:bold;
-				margin-top:0;
+				margin-top:0.5em;
 				font-size:0.75em;
 				letter-spacing:normal;
 			}
@@ -1691,6 +1696,19 @@ FOOTER STYLES
 		margin-top:-2em;
 		text-align:center;
 		background:$light-gray;
+		.img {
+			height:192px;
+			background:$white;
+			position:relative;
+			img {
+				max-width:90%;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+
+			}
+		}
 		.cause {
 			max-width:300px;
 			margin:0 auto 4em auto;
@@ -2097,7 +2115,7 @@ FOOTER STYLES
 		position:relative;
 		background-repeat:no-repeat;
 		background-position:center;
-		background-size:contain;
+		background-size:300px;
 		background-color:$blue;
 		h1 {
 			color:$white;

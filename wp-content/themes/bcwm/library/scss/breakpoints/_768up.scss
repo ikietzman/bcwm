@@ -430,6 +430,16 @@ mobile. Make sure to double check these!
 			max-width:875px;
 			margin:0 auto;
 		}
+		.link-boxes__secondary{
+			.link-box__secondary {
+				.main-link, .learn-more {
+					display:none;
+				}
+			}
+			.link-box-container:hover > .link-box__secondary .main-link, .link-box-container:hover > .link-box__secondary .learn-more {
+				display:block;
+			}
+		}
 		.link-box-container {
 			display:inline-block;
 			width:250px;

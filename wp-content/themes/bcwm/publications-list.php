@@ -31,11 +31,11 @@
 									<div class="page-content-left-inner">
 										<h2>Financial<br>Planning</h2>
 											<ul class="publications-nav">
-												<li id="education"><a href="#education-section">Education Planning</a></li>
 												<li id="retirement"><a href="#retirement-section">Retirement Planning</a></li>
-												<li id="insurance"><a href="#insurance-section">Insurance Planning</a></li>
+												<li id="education"><a href="#education-section">Education Planning</a></li>
 												<li id="tax"><a href="#tax-section">Tax Planning</a></li>
 												<li id="estate"><a href="#estate-section">Estate Planning</a></li>
+												<li id="insurance"><a href="#insurance-section">Insurance Planning</a></li>
 												<li id="philanthropic"><a href="#philanthropic-section">Philanthropic Planning</a></li>
 											</ul>
 										<h2>Portfolio<br>Management</h2>
