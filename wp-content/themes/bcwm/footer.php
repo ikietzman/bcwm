@@ -4,7 +4,7 @@
 
 					<div class="footer-top">
 						<div class="footer-logo">
-							<img src="<?php the_field('logo_footer', 'option'); ?>" />
+							<a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo_footer', 'option'); ?>" /></a>
 						</div>
 						<div class="footer-contact">
 							<div class="footer-address">
