@@ -55,11 +55,18 @@
 											<?php
 												$args = array( 'category_name' => 'Education Planning', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="retirement-section"></a>
@@ -68,11 +75,18 @@
 											<?php
 												$args = array( 'category_name' => 'Retirement Planning', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="insurance-section"></a>
@@ -81,11 +95,18 @@
 											<?php
 												$args = array( 'category_name' => 'Insurance Planning', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="tax-section"></a>
@@ -94,11 +115,18 @@
 											<?php
 												$args = array( 'category_name' => 'Tax Planning', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="estate-section"></a>
@@ -107,11 +135,18 @@
 											<?php
 												$args = array( 'category_name' => 'Estate Planning', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="philanthropic-section"></a>
@@ -120,11 +155,18 @@
 											<?php
 												$args = array( 'category_name' => 'Philanthropic Planning', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="securities-section"></a>
@@ -133,11 +175,18 @@
 											<?php
 												$args = array( 'category_name' => 'Securities', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="economics-section"></a>
@@ -146,24 +195,38 @@
 											<?php
 												$args = array( 'category_name' => 'Economics', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 										<a name="behavioral-section"></a>
 										<div class="publication-category" id="publication-category-behavioral">
-											<h3>Behavioral Finance</h3>
+											<h3>Behavioral Financeasdf</h3>
 											<?php
 												$args = array( 'category_name' => 'Behavioral Finance', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );
+											?>
+											<?php if (count($postslist) > 0) :
 												foreach ($postslist as $post) :  setup_postdata($post);
 												?>
 												<h2><?php the_title(); ?></h2>
 												<div class="post-content"><?php the_content(); ?></div>
 												<?php endforeach; ?>
+
+											<?php else : ?>
+												<h2>No publications yet. Check back soon!</h2>
+
+											<?php endif; ?>
 										</div>
 
 
