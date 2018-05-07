@@ -359,7 +359,7 @@ jQuery(document).ready(function($) {
 	/* Correct Publication Category Open on Page Load */
 	if (window.location.pathname.indexOf('publications-list') > 0) {
 		console.log(window.innerWidth);
-		if (window.innerWidth >= 768) {
+		if (window.innerWidth >= 7) {
 			var hash = location.hash;
 			var id = hash.slice(hash.indexOf('#') + 1, hash.indexOf('-'))
 			console.log(id);

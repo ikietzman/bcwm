@@ -22,7 +22,7 @@
 										</div>
 
 										<div class="search-boxes">
-											<h3>Seach BCWM Archives</h3>
+											<h3>Search BCWM Archives</h3>
 											<?php echo get_search_form(); ?>
 											<select name="archive-dropdown" 		onchange="document.location.href=this.options[this.selectedIndex].value;">
 											  <option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>

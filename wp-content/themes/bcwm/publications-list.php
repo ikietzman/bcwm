@@ -211,7 +211,7 @@
 
 										<a name="behavioral-section"></a>
 										<div class="publication-category" id="publication-category-behavioral">
-											<h3>Behavioral Financeasdf</h3>
+											<h3>Behavioral Finance</h3>
 											<?php
 												$args = array( 'category_name' => 'Behavioral Finance', 'post_type' =>  'acme_product' );
 												$postslist = get_posts( $args );

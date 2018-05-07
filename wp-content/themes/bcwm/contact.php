@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name:
+ Template Name: Contact
 */
 ?>
 
@@ -33,6 +33,8 @@
 									<p><?php the_field('toll_free_phone', 'option'); ?></p>
 									<h3>Fax</h3>
 									<p><?php the_field('fax', 'option'); ?></p>
+									<h3>Email</h3>
+									<p><?php the_field('email', 'option'); ?></p>
 									<h3>Follow Us!</h3>
 									<?php
 

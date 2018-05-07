@@ -37,6 +37,7 @@
 										    while ( have_rows('content_sections') ) : the_row();
 
 										        // display a sub field value
+														echo '<a name="' . get_sub_field('anchor_name') . '" ></a>';
 														echo '<h2>' . get_sub_field('title') . '</h2>';
 														echo get_sub_field('content');
 
