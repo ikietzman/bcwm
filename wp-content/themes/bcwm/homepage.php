@@ -86,33 +86,40 @@
 											<h3>Commentary</h3>
 											<div class="article-inner">
 												<header class="article-header">
-													<?php
-														$args = array( 'numberposts' => '1' );
-														$recent_posts = wp_get_recent_posts( $args );
-														foreach( $recent_posts as $recent ){
-															echo '<h1 class="h2 entry-title"><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></h1>';
-															echo '<p class="byline entry-meta vcard">';
-						                                                                        printf( __( '', 'bonestheme' ).' %1$s %2$s',
-						                       								/* the time the post was published */
-						                       								'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-						                       								/* the author of the post */
-						                       								'<span class="by">'.__( 'by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-						                    							);
-															echo '</p>';
-															echo '<section class="entry-content cf">';
-															//echo get_the_content($recent["ID"]);
-															$content_post = get_post($recent["ID"]);
-															echo wp_trim_words($content_post->post_content, 55);
-															echo '</section>';
-															echo '<div class="read-more">';
-															echo '<a href="';
-															the_permalink($recent["ID"]);
-															echo '">Read More</a>';
-															echo '</div>';
+													<?php $query = new WP_Query( array( 'posts_per_page' => 1 ) );
+														if ( $query->have_posts() ) {
+														    while ( $query->have_posts() ) {
+														        $query->the_post();
+																		echo '<h1 class="h2 entry-title"><a href="' . get_permalink() . '">' .   get_the_title().'</a></h1>';
+																		echo '<p class="byline entry-meta vcard">';
+																		printf( __( '', 'bonestheme' ).' %1$s %2$s',
+																			/* the time the post was published */
+																			'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+																			/* the author of the post */
+																			'<span class="by">'.__( 'by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+);
+																		echo '</p>';
+																		echo '<section class="entry-content cf">';
+																		//echo get_the_content($recent["ID"]);
+																		// $content_post = get_post($recent["ID"]);
+																		echo wp_trim_words(get_the_content(), 55);
+																		echo '</section>';
+																		echo '<div class="read-more">';
+																		echo '<a href="';
+																		the_permalink();
+																		echo '">Read More</a>';
+																		echo '</div>';
+
+
+																	wp_reset_query();
+														    }
+														    wp_reset_postdata();
+														} else {
+														    // none were found
 														}
 
-														wp_reset_query();
 													?>
+													
 												</header>
 											</div>
 										</article>
