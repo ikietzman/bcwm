@@ -89,8 +89,4 @@
 
 			</div>
 
-			<!-- Begin Constant Contact Active Forms -->
-			<script> var _ctct_m = "f435fa8ceae25c6ec3418230c2627ddc"; </script>
-			<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
-			<!-- End Constant Contact Active Forms -->
 <?php get_footer(); ?>

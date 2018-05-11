@@ -193,7 +193,7 @@ HEADER STYLES
 		max-width:75%;
 		padding-bottom:1em;
 		transition:right 1s;
-		z-index:1;
+		z-index:2;
 		&.open {
 			right:0;
 			transition:right 1s;
@@ -1170,6 +1170,9 @@ FOOTER STYLES
 		.link-boxes__secondary {
 			text-align:center;
 			position:relative;
+			max-width:850px;
+			margin:0 auto;
+			min-height:250px;
 			.link-box__secondary {
 				border:solid 2px $dark-blue;
 				position:relative;
@@ -1991,7 +1994,7 @@ FOOTER STYLES
 		}
 	}
 }
-.search {
+.archive, .search {
 	input[type="text"],input[type="search"], select {
 		background-color:$light-gray;
 		box-sizing: border-box;
@@ -2275,4 +2278,9 @@ FOOTER STYLES
  /* Parallax Bullshit */
  #home-line-1, #home-line-2, #home-line-3, #icm-line, #what-we-do-line, #who-we-are-line-1, #who-we-are-line-2, #bio-line-1, #bio-line-2, #our-history-line, #commentary-line-1, #commentary-line-2, #publications-line-1, #publications-line-2, #contact-line {
 	 display:none;
+ }
+/* Hard break on mobile*/
+
+ .mobile-break {
+	 display:block;
  }

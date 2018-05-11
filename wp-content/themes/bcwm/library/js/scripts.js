@@ -302,7 +302,9 @@ jQuery(document).ready(function($) {
 		whoWeAreParallax();
 	}
 	if (window.location.pathname.indexOf('who-we-are') > 0 && window.location.pathname !== '/bcwm_dev/about/who-we-are/' && window.innerWidth >= 768) {
-		bioPositioning();
+		$(window).on("load", function() {
+			bioPositioning();
+		}
 	}
 	if (window.location.pathname.indexOf('our-history') > 0 && window.innerWidth >= 768) {
 		ourHistoryParallax();
@@ -342,7 +344,9 @@ jQuery(document).ready(function($) {
 			whoWeAreParallax();
 		}
 		if (window.location.pathname.indexOf('who-we-are') > 0 && window.location.pathname !== '/bcwm_dev/about/who-we-are/' && window.innerWidth >= 768) {
-			bioPositioning();
+			$(window).on("load", function() {
+				bioPositioning();
+			}
 		}
 		if (window.location.pathname.indexOf('our-history') > 0 && window.innerWidth >= 768) {
 			ourHistoryParallax();

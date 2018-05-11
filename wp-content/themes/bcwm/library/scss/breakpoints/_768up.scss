@@ -444,10 +444,33 @@ mobile. Make sure to double check these!
 			display:inline-block;
 			vertical-align:middle;
 			width:250px;
+			position:absolute;
+			top:23px;
+			&.link-box-container1 {
+				left:32px;
+				&:hover {
+					left:16px;
+					top:0;
+				}
+			}
+			&.link-box-container2 {
+				left:50%;
+				transform:translateX(-50%);
+				&:hover {
+					top:0;
+				}
+			}
+			&.link-box-container3 {
+				right:32px;
+				&:hover {
+					right:16px;
+					top:0;
+				}
+			}
 			&:hover {
 				width:284px;
 				& > .link-box__secondary {
-					height:264px;
+					height:244px;
 				}
 			}
 		}
@@ -904,4 +927,9 @@ mobile. Make sure to double check these!
 	display:inline;
 	position:absolute;
 	left:0;
+}
+
+/* Reset hard mobile break */
+.mobile-break {
+	display:none;
 }

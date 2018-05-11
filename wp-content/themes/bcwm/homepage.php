@@ -63,7 +63,7 @@
 											    while ( have_rows('secondary_link_boxes') ) : the_row();
 
 											        // display a sub field value
-															echo '<div class="link-box-container"><div class="link-box link-box__secondary link-box__secondary__' . $i . '">';
+															echo '<div class="link-box-container link-box-container' . $i . '"><div class="link-box link-box__secondary link-box__secondary__' . $i . '">';
 															echo '<a class="main-link" href="' . site_url() . get_sub_field('link') . '">' . get_sub_field('label') .'</a>';
 															echo '<a class="learn-more" href="' . site_url() . get_sub_field('link') . '">Learn More</a>';
 															echo '</div></div>';
@@ -119,7 +119,7 @@
 														}
 
 													?>
-													
+
 												</header>
 											</div>
 										</article>
