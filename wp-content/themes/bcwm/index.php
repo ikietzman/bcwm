@@ -16,7 +16,7 @@
 									<p>Each month, the BCWM Portfolio Management team publishes an Investment Commentary that examines the latest developments in financial markets and the economy. We filter out the noise and present the information most relevant to our investment strategies and management of our clients’ portfolios.</p>
 									<div class="search-boxes-container">
 										<div class="search-boxes">
-											<h3>Investment Commentary Sign-Up</h3>
+											<h3>Investment Commentary<span class="mobile-break"></span> Sign-Up</h3>
 											<input type="text" placeholder="Email address"><input type="submit" value="Submit">
 											<?php //include 'sign-up.php'; ?>
 										</div>

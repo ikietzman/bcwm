@@ -25,8 +25,8 @@
 									?>
 									<h1 class="page-title"><?php the_title(); ?></h1>
 									<h3 class="first-h3">Boyer Corporon Wealth Management</h3>
-									<p><?php the_field('address_1', 'option'); ?>, <?php the_field('address_2', 'option'); ?></p>
-									<p><?php the_field('address_3', 'option'); ?></p>
+									<p><a href="<?php the_field('address_link', 'option'); ?>" target="_blank"><?php the_field('address_1', 'option'); ?>, <?php the_field('address_2', 'option'); ?></a></p>
+									<p><a href="<?php the_field('address_link', 'option'); ?>" target="_blank"><?php the_field('address_3', 'option'); ?></a></p>
 									<h3>Phone</h3>
 									<p><?php the_field('phone', 'option'); ?></p>
 									<h3>Toll Free</h3>

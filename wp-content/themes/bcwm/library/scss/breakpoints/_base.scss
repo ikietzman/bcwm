@@ -1226,7 +1226,7 @@ FOOTER STYLES
 }
 /* Institutional Capital Management and Personal Wealth Management*/
 
-.page-template-icm, .page-template-pwm {
+.page-template-icm, .page-template-pwm, .page-template-client-login {
 	.page-header {
 		height:200px;
 		background-repeat:no-repeat;
@@ -1318,6 +1318,16 @@ FOOTER STYLES
 		}
 	}
 }
+
+.page-template-client-login .page-header h1 {
+	font-family: "Merriweather Bold", "Merriweather", Times New Roman, Times, serif;
+	color: #184073;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
  /* Login Page */
 
  .login_link {
@@ -1367,7 +1377,7 @@ FOOTER STYLES
 		h1 {
 			color:$white;
 			text-transform:uppercase;
-			font-family: $serif;
+			font-family: $serif-bold;
 			text-align:center;
 			font-size:2em;
 			position:relative;
@@ -1399,6 +1409,7 @@ FOOTER STYLES
 	}
 	.philosophy-right {
 		text-align:center;
+		display:none;
 		.philosophy-icon {
 			margin:1em;
 		}
@@ -1489,7 +1500,7 @@ FOOTER STYLES
 	.page-header {
 		padding-left:5%;
 		padding-right:5%;
-		padding-top:2em;
+		padding-top:3em;
 		padding-bottom:2em;
 		.intro {
 			text-align:center;
@@ -1755,6 +1766,11 @@ FOOTER STYLES
 		background-size:250px;
 		background-position: center;
 		margin:0 auto;
+		a {
+			color:$white;
+			text-decoration: none;
+			font-weight:normal;
+		}
 		#breadcrumbs {
 			text-align:left;
 			a {
@@ -1864,7 +1880,7 @@ FOOTER STYLES
 	.page-header {
 		text-align:center;
 		margin:0 auto;
-		padding:0 5% 2em 5%;
+		padding:3em 5% 2em 5%;
 		#breadcrumbs {
 			text-align:left;
 		}
@@ -2203,7 +2219,8 @@ FOOTER STYLES
 		}
 	}
 	.page-content-left {
-		text-align:center;
+		padding-left:5%;
+		// text-align:center;
 		h2 {
 			font-size:1.25em;
 			line-height:1.25em;
@@ -2284,3 +2301,6 @@ FOOTER STYLES
  .mobile-break {
 	 display:block;
  }
+nav .mobile-break {
+	display:none;
+}
