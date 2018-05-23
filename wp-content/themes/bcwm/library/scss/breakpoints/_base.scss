@@ -1298,6 +1298,7 @@ FOOTER STYLES
 	.ticker-item {
 		font-family:'Merriweather Bold', $serif;
 		// font-weight:bold;
+		color: $gold;
 		font-style:italic;
 		position:absolute;
 		left:0;
@@ -1979,6 +1980,15 @@ FOOTER STYLES
 			vertical-align:top;
 			margin-bottom:0;
 		}
+		input[type="email"] {
+			background-color:$light-gray;
+			box-sizing: border-box;
+			-webkit-appearance: none;
+			border-radius:0;
+			font-size:0.75em;
+			padding:0.5em;
+			height:30px;
+		}
 		input[type="submit"] {
 			height:30px;
 			width:35%;
@@ -2007,6 +2017,43 @@ FOOTER STYLES
 		}
 		select {
 			width:35%;
+		}
+		.validation_error {
+			color:red;
+		}
+		.gform_confirmation_message_1 {
+			color: green;
+		}
+		.gfield_error {
+			height:170px;
+		}
+		.gform_body {
+			display:inline-block;
+			width:65%;
+			li {
+				position:relative;
+				.validation_message {
+					position:absolute;
+					left:0;
+					color:red;
+				}
+			}
+
+		}
+		.gform_footer {
+			display:inline-block;
+			width:34%;
+			margin-left:-4px;
+			input {
+				width:100%;
+			}
+		}
+		.gform_fields {
+			margin:0;
+
+			li {
+				list-style-type:none;
+			}
 		}
 	}
 }

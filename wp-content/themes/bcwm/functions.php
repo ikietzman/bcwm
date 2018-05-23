@@ -163,7 +163,15 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-
+  register_sidebar(array(
+		'id' => 'commentary',
+		'name' => __( 'Commentary', 'bonestheme' ),
+		'description' => __( 'Commentary sidebar.', 'bonestheme' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
 	/*
 	to add more sidebars or widgetized areas, just copy
 	and edit the above sidebar code. In order to call
@@ -270,7 +278,7 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 function create_post_type() {
-  register_post_type( 'acme_product',
+  register_post_type( 'publication',
     array(
       'labels' => array(
         'name' => __( 'Publications' ),
