@@ -287,6 +287,7 @@ function create_post_type() {
       'public' => true,
       'has_archive' => true,
       'taxonomies'  => array( 'category' ),
+      'supports' => array('title', 'editor', 'thumbnail', 'comments', 'author')
     )
   );
 }

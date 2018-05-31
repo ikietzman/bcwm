@@ -1,4 +1,4 @@
-<?php
+publication<?php
 /*
  Template Name: Publications List
 */
@@ -53,7 +53,7 @@
 										<div class="publication-category open" id="publication-category-education">
 											<h3>Education Planning</h3>
 											<?php
-												$args = array( 'category_name' => 'Education Planning', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Education Planning', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -73,7 +73,7 @@
 										<div class="publication-category" id="publication-category-retirement">
 											<h3>Retirement Planning</h3>
 											<?php
-												$args = array( 'category_name' => 'Retirement Planning', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Retirement Planning', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -93,7 +93,7 @@
 										<div class="publication-category" id="publication-category-insurance">
 											<h3>Insurance Planning</h3>
 											<?php
-												$args = array( 'category_name' => 'Insurance Planning', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Insurance Planning', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -113,7 +113,7 @@
 										<div class="publication-category" id="publication-category-tax">
 											<h3>Tax Planning</h3>
 											<?php
-												$args = array( 'category_name' => 'Tax Planning', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Tax Planning', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -133,7 +133,7 @@
 										<div class="publication-category" id="publication-category-estate">
 											<h3>Estate Planning</h3>
 											<?php
-												$args = array( 'category_name' => 'Estate Planning', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Estate Planning', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -153,7 +153,7 @@
 										<div class="publication-category" id="publication-category-philanthropic">
 											<h3>Philanthropic Planning</h3>
 											<?php
-												$args = array( 'category_name' => 'Philanthropic Planning', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Philanthropic Planning', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -173,7 +173,7 @@
 										<div class="publication-category" id="publication-category-securities">
 											<h3>Securities</h3>
 											<?php
-												$args = array( 'category_name' => 'Securities', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Securities', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -193,7 +193,7 @@
 										<div class="publication-category" id="publication-category-economics">
 											<h3>Economics</h3>
 											<?php
-												$args = array( 'category_name' => 'Economics', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Economics', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :
@@ -213,7 +213,7 @@
 										<div class="publication-category" id="publication-category-behavioral">
 											<h3>Behavioral Finance</h3>
 											<?php
-												$args = array( 'category_name' => 'Behavioral Finance', 'post_type' =>  'acme_product' );
+												$args = array( 'category_name' => 'Behavioral Finance', 'post_type' =>  'publication' );
 												$postslist = get_posts( $args );
 											?>
 											<?php if (count($postslist) > 0) :

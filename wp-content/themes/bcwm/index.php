@@ -36,7 +36,10 @@
 
 							<div class="page-content">
 								<img id="commentary-line-2" src="<?php echo get_template_directory_uri()?>/library/images/commentary-line-2.png" />
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+								<?php $query = new WP_Query( array( 'posts_per_page' => 5,
+								'category_name' => 'investment-commentary') );
+
+								if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 									<div class="article-inner">

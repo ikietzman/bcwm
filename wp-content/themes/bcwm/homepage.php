@@ -86,7 +86,8 @@
 											<h3>Commentary</h3>
 											<div class="article-inner">
 												<header class="article-header">
-													<?php $query = new WP_Query( array( 'posts_per_page' => 1 ) );
+													<?php $query = new WP_Query( array( 'posts_per_page' => 1,
+												 	'category_name' => 'investment-commentary') );
 														if ( $query->have_posts() ) {
 														    while ( $query->have_posts() ) {
 														        $query->the_post();

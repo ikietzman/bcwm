@@ -78,7 +78,7 @@
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
-
+		<?php the_field('tracking_code', 'option'); ?>
 	</body>
 
 </html> <!-- end of site. what a ride! -->
