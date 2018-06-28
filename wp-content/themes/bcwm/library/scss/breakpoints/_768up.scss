@@ -946,6 +946,7 @@ mobile. Make sure to double check these!
 			position:absolute;
 			right:2em;
 			top:2em;
+			z-index:9999;
 			.menu-line {
 				height:4px;
 				background:$gold;
