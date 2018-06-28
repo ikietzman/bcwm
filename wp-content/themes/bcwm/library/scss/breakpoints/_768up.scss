@@ -31,7 +31,7 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {
+.no-touch .header {
 	position:relative;
 	z-index:1;
 	#inner-header {
@@ -72,7 +72,7 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 
-.nav {
+.no-touch .nav {
 	border: 0;
 	ul {
 		background:$dark-blue;
@@ -933,4 +933,152 @@ mobile. Make sure to double check these!
 /* Reset hard mobile break */
 .mobile-break {
 	display:none;
+}
+
+.touch {
+	.header {
+		background-color: $dark-blue;
+		position:relative;
+		.menu-button {
+			display:block;
+			width:40px;
+			cursor:pointer;
+			position:absolute;
+			right:2em;
+			top:2em;
+			.menu-line {
+				height:4px;
+				background:$gold;
+				margin:4px;
+			}
+		}
+		nav {
+			position:absolute;
+			right:-250px;
+			top:100%;
+			background-color:$dark-blue;
+			text-align:right;
+			width:250px;
+			max-width:75%;
+			padding-bottom:1em;
+			transition:right 1s;
+			z-index:2;
+			&.open {
+				right:0;
+				transition:right 1s;
+			}
+			.portal {
+				padding:0.75em 0.75em 0 0;
+				text-transform:uppercase;
+				text-decoration:none;
+				a {
+					color:$gray;
+					text-decoration:none;
+				}
+			}
+			li a {
+				font-family: $serif;
+				text-transform:uppercase;
+				letter-spacing: 2px;
+				font-size:1.25em;
+			}
+			.sub-menu {
+				margin:0;
+				li a {
+					color: $gold;
+					font-size:1em;
+				}
+			}
+		}
+	}
+
+		#logo {
+			margin: 0.5em 0 0.25em 0;
+
+			a {
+				color: $white;
+			}
+		}
+
+	/*********************
+	NAVIGATION STYLES
+	*********************/
+
+	/*
+	all navs have a .nav class applied via
+	the wp_menu function; this is so we can
+	easily write one group of styles for
+	the navs on the site so our css is cleaner
+	and more scalable.
+	*/
+
+	.nav {
+		border-bottom: 0;
+		margin: 0;
+
+		li {
+			list-style-type:none;
+			a {
+				display: block;
+				color: $white;
+				text-decoration: none;
+				padding: 0.75em;
+
+				/*
+				remember this is for mobile ONLY, so there's no need
+				to even declare hover styles here, you can do it in
+				the style.scss file where it's relevant. We want to
+				keep this file as small as possible!
+				*/
+				&:hover, &:focus {
+
+				}
+			}
+
+			&:first-child {}
+
+			&:last-child {}
+
+			/*
+			so you really have to rethink your dropdowns for mobile.
+			you don't want to have it expand too much because the
+			screen is so small. How you manage your menu should
+			depend on the project. Here's some great info on it:
+			http://www.alistapart.com/articles/organizing-mobile/
+			*/
+			ul.sub-menu,
+			ul.children {
+
+				li {
+
+					a {
+						padding-left: 30px;
+
+						&:hover,
+						&:focus {}
+
+						&:link {}
+
+					}
+
+					&:first-child {}
+
+					&:last-child {}
+
+				}
+
+			}
+
+		} /* end .menu li */
+
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
+
+			a {}
+
+		}  /* end current highlighters */
+
+	} /* end .nav */
 }
