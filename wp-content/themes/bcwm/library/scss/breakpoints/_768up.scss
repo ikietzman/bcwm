@@ -527,50 +527,8 @@ mobile. Make sure to double check these!
 			max-width:875px;
 			margin:0 auto;
 		}
-		.link-boxes__secondary{
-			.link-box__secondary {
-				.main-link, .learn-more {
-					display:none;
-				}
-			}
-			.link-box-container:hover > .link-box__secondary .main-link, .link-box-container:hover > .link-box__secondary .learn-more {
-				display:block;
-			}
-		}
-		.link-box-container {
-			display:inline-block;
-			vertical-align:middle;
-			width:250px;
-			position:absolute;
-			top:23px;
-			&.link-box-container1 {
-				left:32px;
-				&:hover {
-					left:16px;
-					top:0;
-				}
-			}
-			&.link-box-container2 {
-				left:50%;
-				transform:translateX(-50%);
-				&:hover {
-					top:0;
-				}
-			}
-			&.link-box-container3 {
-				right:32px;
-				&:hover {
-					right:16px;
-					top:0;
-				}
-			}
-			&:hover {
-				width:284px;
-				& > .link-box__secondary {
-					height:244px;
-				}
-			}
-		}
+
+
 		.recent-blog {
 			margin-top:5em;
 		}
@@ -905,6 +863,9 @@ mobile. Make sure to double check these!
 			.page-content-left-inner {
 				float:right;
 				margin-right:2em;
+			}
+			ul li {
+				line-height:1em;
 			}
 		}
 		.page-content-right {

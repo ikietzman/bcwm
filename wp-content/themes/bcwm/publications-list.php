@@ -1,4 +1,4 @@
-publication<?php
+<?php
 /*
  Template Name: Publications List
 */
