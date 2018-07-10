@@ -10,8 +10,25 @@
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 							?>
-							
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+							<?php echo 'testing'; ?>
+							<?php
+								$url = $_SERVER['REQUEST_URI'];
+								$arr = explode('/', $url);
+								$mo = $arr[count($arr) - 2];
+								$yr = $arr[count($arr) - 3];
+							?>
+							<?php echo 'testing'; ?>
+
+							<?php $query = new WP_Query( array( 'posts_per_page' => 9999,
+							//'paged' => $paged,
+							'category_name' => 'investment-commentary',
+							//'monthnum' => 5,
+							//'year' => $yr
+							'm' => $yr.$mo
+						) );
+
+							if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
@@ -45,7 +62,7 @@
 
 							<?php endwhile; ?>
 
-									<?php bones_page_navi(); ?>
+									<?php //bones_page_navi(); ?>
 
 							<?php else : ?>
 

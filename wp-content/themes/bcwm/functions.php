@@ -293,4 +293,24 @@ function create_post_type() {
 }
 add_action( 'init', 'create_post_type' );
 
+
+add_filter( 'getarchives_where', 'customarchives_where' );
+add_filter( 'getarchives_join', 'customarchives_join' );
+
+function customarchives_join( $x ) {
+
+    global $wpdb;
+
+    return $x . " INNER JOIN $wpdb->term_relationships ON ($wpdb->posts.ID = $wpdb->term_relationships.object_id) INNER JOIN $wpdb->term_taxonomy ON ($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id)";
+
+}
+
+function customarchives_where( $x ) {
+
+    global $wpdb;
+
+    $include = '15'; // category id to exclude
+
+    return $x . " AND $wpdb->term_taxonomy.taxonomy = 'category' AND $wpdb->term_taxonomy.term_id IN ($include)";
+}
 /* DON'T DELETE THIS CLOSING TAG */ ?>

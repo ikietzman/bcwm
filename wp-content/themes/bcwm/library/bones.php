@@ -275,7 +275,10 @@ function bones_page_navi() {
     'next_text'    => '&gt;',
     'type'         => 'list',
     'end_size'     => 3,
-    'mid_size'     => 3
+    'mid_size'     => 3,
+		'add_args'		 => array(
+			'category_name' => 'investment-commentary'
+		)
   ) );
   echo '</nav>';
 } /* end page navi */
